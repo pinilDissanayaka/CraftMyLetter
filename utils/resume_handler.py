@@ -6,7 +6,7 @@ from langchain_community.document_loaders import Docx2txtLoader, TextLoader, PyP
 def load_document(uploaded_document):
     try:
         temp_dir=TemporaryDirectory()
-        temp_file_path=os.path.join(temp_dir, uploaded_document.name)
+        temp_file_path=os.path.join(temp_dir.name, uploaded_document.name)
         
         with open(temp_file_path, "rb") as temp_file:
             temp_file.write(uploaded_document.read())
