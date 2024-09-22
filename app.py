@@ -48,11 +48,11 @@ st.write("or")
 
 job_post_description=st.text_area("Paste the job posting description here (optional) : ", value="")
 
-linkedIn_profile_url=st.text_input("LinkedIn URL if the user wants to include it in the cover letter : (Optional)")
+linkedIn_profile_url=st.text_input("LinkedIn URL if the user wants to include it in the cover letter : (Optional)", value=None)
 
 additional_prompt=st.text_input("Additional Prompt (optional) : ", value=None)
 
-if uploaded_resume and tone and length and focus and preferred_sign_off and linkedIn_profile_url:
+if uploaded_resume and tone and length and focus and preferred_sign_off:
     if st.button("Generate Cover letter"):
         with st.spinner("Thinking..."):
             resume=load_document(uploaded_document=uploaded_resume)
