@@ -1,5 +1,7 @@
 import streamlit as st
 from utils.jobpost_handler import get_job_description
+from utils.resume_handler import load_document
+from utils.llm_handler import generate_cover_letter
 
 temp_file_path="temp/"
 
@@ -13,6 +15,8 @@ st.write("----------------------------------------------------------------------
 
 
 uploaded_resume = st.file_uploader("Upload a resume in formats like PDF, Word, or text :", accept_multiple_files=False)
+
+resume=load_document(uploaded_document=uploaded_resume)
 
 tone = st.selectbox(
     "Select a Tone of the Letter :",
@@ -50,6 +54,12 @@ job_description=get_job_description(job_description=job_post_description, job_po
 linkedIn_profile_url=st.text_input("LinkedIn URL if the user wants to include it in the cover letter : (Optional)")
 
 additional_prompt=st.text_input("Additional Prompt (optional) : ", value=None)
+
+if resume and tone and length and focus and preferred_sign_off and job_description and linkedIn_profile_url:
+    if st.button("Generate Cover letter"):
+        with st.spinner("Thinking..."):
+            generated_cover_letter=generate_cover_letter(job_description=job_description, resume=resume, tone=tone, length=length, sign_off=preferred_sign_off)
+            st.write(generated_cover_letter)
 
 
 
