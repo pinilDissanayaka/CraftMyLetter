@@ -59,7 +59,7 @@ if uploaded_resume and tone and length and focus and preferred_sign_off:
             
             job_description=get_job_description(job_description=job_post_description, job_post_url=job_post_url)
             
-            generated_cover_letter=generate_cover_letter(job_description=job_description, resume=resume, tone=tone, length=length, sign_off=preferred_sign_off)
+            generated_cover_letter=generate_cover_letter(job_description=job_description, resume=resume, tone=tone, length=length, sign_off=preferred_sign_off, additional_prompt=additional_prompt)
             
             st.write(generated_cover_letter)
 

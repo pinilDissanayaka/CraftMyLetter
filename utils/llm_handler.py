@@ -3,7 +3,7 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 from utils.config import get_llm
 
-def generate_cover_letter(job_description, resume, tone, length, sign_off):
+def generate_cover_letter(job_description, resume, tone, length, sign_off, additional_prompt):
     cover_letter_prompt_template="""
     You are an AI language model tasked with generating a personalized cover letter based on the following information:
 
@@ -12,6 +12,7 @@ def generate_cover_letter(job_description, resume, tone, length, sign_off):
         3. **Tone**: {TONE}
         4. **Length Preference**: {LENGTH}
         5. **Closing Preference**: {SIGN_OFF}
+        6. **addition prompt**: {ADDITIONAL_PROMPT}
 
     Based on this information, generate a professional cover letter that:
 
@@ -29,12 +30,12 @@ def generate_cover_letter(job_description, resume, tone, length, sign_off):
     llm=get_llm()
     
     cover_letter_generate_chain=(
-        {"JOB_DESCRIPTION" : RunnablePassthrough(), "RESUME" : RunnablePassthrough(), "TONE":RunnablePassthrough(), "LENGTH":RunnablePassthrough(), "SIGN_OFF":RunnablePassthrough()}|
+        {"JOB_DESCRIPTION" : RunnablePassthrough(), "RESUME" : RunnablePassthrough(), "TONE":RunnablePassthrough(), "LENGTH":RunnablePassthrough(), "SIGN_OFF":RunnablePassthrough(), "ADDITIONAL_PROMPT":RunnablePassthrough()}|
         cover_letter_prompt |
         llm |
         StrOutputParser()
     )
     
-    generated_cover_letter=cover_letter_generate_chain.invoke({"JOB_DESCRIPTION" : job_description, "RESUME" : resume, "TONE":tone, "LENGTH": length, "SIGN_OFF": sign_off})
+    generated_cover_letter=cover_letter_generate_chain.invoke({"JOB_DESCRIPTION" : job_description, "RESUME" : resume, "TONE":tone, "LENGTH": length, "SIGN_OFF": sign_off, "ADDITIONAL_PROMPT": additional_prompt})
     
     return generated_cover_letter
