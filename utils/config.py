@@ -2,7 +2,6 @@ import os
 import yaml
 import streamlit as st
 from langchain_groq.chat_models import ChatGroq
-from groq import Groq
 
 
 os.environ['GROQ_API_KEY']=st.secrets['GROQ_API_KEY']

@@ -16,7 +16,6 @@ st.write("----------------------------------------------------------------------
 
 uploaded_resume = st.file_uploader("Upload a resume in formats like PDF, Word, or text :", accept_multiple_files=False)
 
-resume=load_document(uploaded_document=uploaded_resume)
 
 tone = st.selectbox(
     "Select a Tone of the Letter :",
@@ -55,9 +54,10 @@ linkedIn_profile_url=st.text_input("LinkedIn URL if the user wants to include it
 
 additional_prompt=st.text_input("Additional Prompt (optional) : ", value=None)
 
-if resume and tone and length and focus and preferred_sign_off and job_description and linkedIn_profile_url:
+if uploaded_resume and tone and length and focus and preferred_sign_off and job_description and linkedIn_profile_url:
     if st.button("Generate Cover letter"):
         with st.spinner("Thinking..."):
+            resume=load_document(uploaded_document=uploaded_resume)
             generated_cover_letter=generate_cover_letter(job_description=job_description, resume=resume, tone=tone, length=length, sign_off=preferred_sign_off)
             st.write(generated_cover_letter)
 

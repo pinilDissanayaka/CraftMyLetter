@@ -1,5 +1,5 @@
 import os
-from langchain.document_loaders import WebBaseLoader
+from langchain_community.document_loaders import WebBaseLoader
 
 
 def get_job_description(job_description=None, job_post_url=None):
