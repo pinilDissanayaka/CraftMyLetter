@@ -1,6 +1,5 @@
 import os
-from langchain.document_loaders import TextLoader, PyPDFLoader
-from langchain_community.document_loaders import Docx2txtLoader
+from langchain_community.document_loaders import Docx2txtLoader, TextLoader, PyPDFLoader
 
 
 def load_document(uploaded_document):
