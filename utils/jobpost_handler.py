@@ -2,7 +2,7 @@ import os
 from langchain_community.document_loaders import WebBaseLoader
 
 
-def get_job_description(job_description=None, job_post_url=None):
+def get_job_description(job_description=None, job_post_url:str=None):
     if job_description:
         return job_description
     else:
