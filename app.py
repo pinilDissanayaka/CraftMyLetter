@@ -42,23 +42,25 @@ focus=st.selectbox("Select a Focus of the Cover Letter :",
 preferred_sign_off=st.selectbox("Choose a closing phrase :",
                                 options=("Sincerely", "Best regards"))
 
-job_post_url=st.text_input("Paste the URL of the job posting here (optional) : ", value=None)
+job_post_url=st.text_input("Paste the URL of the job posting here (optional) : ", value="")
 
 st.write("or")
 
-job_post_description=st.text_area("Paste the job posting description here (optional) : ", value=None)
-
-job_description=get_job_description(job_description=job_post_description, job_post_url=job_post_url)
+job_post_description=st.text_area("Paste the job posting description here (optional) : ", value="")
 
 linkedIn_profile_url=st.text_input("LinkedIn URL if the user wants to include it in the cover letter : (Optional)")
 
 additional_prompt=st.text_input("Additional Prompt (optional) : ", value=None)
 
-if uploaded_resume and tone and length and focus and preferred_sign_off and job_description and linkedIn_profile_url:
+if uploaded_resume and tone and length and focus and preferred_sign_off and linkedIn_profile_url:
     if st.button("Generate Cover letter"):
         with st.spinner("Thinking..."):
             resume=load_document(uploaded_document=uploaded_resume)
+            
+            job_description=get_job_description(job_description=job_post_description, job_post_url=job_post_url)
+            
             generated_cover_letter=generate_cover_letter(job_description=job_description, resume=resume, tone=tone, length=length, sign_off=preferred_sign_off)
+            
             st.write(generated_cover_letter)
 
 
