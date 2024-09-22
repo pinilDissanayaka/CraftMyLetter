@@ -3,7 +3,7 @@ from langchain_community.document_loaders import Docx2txtLoader, TextLoader, PyP
 
 
 def load_document(uploaded_document):
-    upload_document_extension=os.path.splitext(load_document.name)[1]
+    upload_document_extension=os.path.splitext(uploaded_document.name)[1]
     
     if upload_document_extension==".txt":
         loader=TextLoader(uploaded_document)
