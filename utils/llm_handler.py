@@ -35,6 +35,6 @@ def generate_cover_letter(job_description, resume, tone, length, sign_off):
         StrOutputParser()
     )
     
-    generated_cover_letter=cover_letter_generate_chain.invoke({"JOB_DESCRIPTION" : job_description, "RESUME" : resume, "TONE":RunnablePassthrough(), "LENGTH": tone, "SIGN_OFF": sign_off})
+    generated_cover_letter=cover_letter_generate_chain.invoke({"JOB_DESCRIPTION" : job_description, "RESUME" : resume, "TONE":tone, "LENGTH": length, "SIGN_OFF": sign_off})
     
-    return generate_cover_letter
+    return generated_cover_letter
