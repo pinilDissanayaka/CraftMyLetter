@@ -8,7 +8,7 @@ def load_document(uploaded_document):
         temp_dir=TemporaryDirectory()
         temp_file_path=os.path.join(temp_dir.name, uploaded_document.name)
         
-        with open(temp_file_path, "rb") as temp_file:
+        with open(temp_file_path, "wb") as temp_file:
             temp_file.write(uploaded_document.read())
         
         upload_document_extension=os.path.splitext(uploaded_document.name)[1]
