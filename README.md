@@ -2,22 +2,22 @@
 CoverCraft is an AI-powered cover letter generator that helps you create personalized, professional cover letters for job applications. Built using Streamlit, LangChain, and LLaMA3, CoverCraft analyzes both job descriptions and resumes to automatically generate a tailored cover letter, highlighting your most relevant skills and experiences.
 
 ## ✨ Features
-1. 🛠️ Job Description Parsing: Understands job requirements and responsibilities by parsing job descriptions.
-2. 📄 Resume Analysis: Extracts key skills, achievements, and experience from your resume.
-3. ✍️ AI-Powered Letter Generation: Uses LLaMA3 via LangChain to generate personalized, compelling cover letters.
-4. 🎨 Customizable Output: Adjust the tone, length, and style of the generated cover letters to suit your preferences.
-5. 💼 Professional Tone: Ensures that the cover letter maintains a polished and professional language.
-6. 🚀 Streamlit Interface: Easy-to-use web interface for quick generation and editing.
+- 🛠️ Job Description Parsing: Understands job requirements and responsibilities by parsing job descriptions.
+- 📄 Resume Analysis: Extracts key skills, achievements, and experience from your resume.
+- ✍️ AI-Powered Letter Generation: Uses LLaMA3 via LangChain to generate personalized, compelling cover letters.
+- � Customizable Output: Adjust the tone, length, and style of the generated cover letters to suit your preferences.
+- 💼 Professional Tone: Ensures that the cover letter maintains a polished and professional language.
+- 🚀 Streamlit Interface: Easy-to-use web interface for quick generation and editing.
 
 ## 🖥️ Demo
 Check out the live demo of CoverCraft here. (Link if hosted, or remove if no demo available.)
 
 ## 🔧 Technologies
-1. 🐍 Python: Core programming language.
-2. 🌐 Streamlit: For building a fast and interactive web interface.
-3. 🔗 LangChain: To chain together job description parsing, resume analysis, and letter generation processes.
-4. 🦙 LLaMA3: Large Language Model used for generating cover letter content.
-5. 🧠 NLP Tools: Spacy, Hugging Face transformers for parsing job descriptions and resumes.
+- 🐍 Python: Core programming language.
+- 🌐 Streamlit: For building a fast and interactive web interface.
+- 🔗 LangChain: To chain together job description parsing, resume analysis, and letter generation processes.
+- 🦙 LLaMA3: Large Language Model used for generating cover letter content.
+- 🧠 NLP Tools: Spacy, Hugging Face transformers for parsing job descriptions and resumes.
 
 ## 🚀 How It Works
 1. Input Job Description: Copy-paste the job description or upload a job posting file.
