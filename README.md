@@ -10,7 +10,7 @@ CraftMyLetter is an AI-powered cover letter generator that helps you create pers
 - 🚀 Streamlit Interface: Easy-to-use web interface for quick generation and editing.
 
 ## 🖥️ Demo
-Check out the live demo of CoverCraft [here](https://pinildissanayaka-craftmyletter-app-gwmjv8.streamlit.app/).
+Check out the live demo of CoverCraft [here](https://craftmyletter-eybxgpw69mybexpqge8jva.streamlit.app/).
 
 ## 🔧 Technologies
 - 🐍 Python: Core programming language.
@@ -52,18 +52,6 @@ streamlit run app.py
 
 5. Open the browser to http://localhost:8501 to interact with the app!
 
-## 🛠️ Project Structure
-```
-CoverCraft/
-├── app.py                 # Main Streamlit app
-├── backend/               # LangChain and LLaMA3 integration
-├── data/                  # Sample resumes and job descriptions
-├── components/            # Custom components for the Streamlit UI
-├── models/                # Pre-trained models and LLaMA3 logic
-├── README.md              # Project documentation
-└── requirements.txt       # Python dependencies
-```
-
 ## 🎯 Usage
 - Run the app using the streamlit run app.py command.
 - Upload your resume and input a job description on the web interface.
@@ -86,7 +74,8 @@ This project is licensed under the MIT License.
 For any questions or feedback, feel free to reach out via email: pinildissanayaka@gmail@com .
 
 ## 📸 Screenshots 
-Upload Resume	Generate Letter	View Result
-
+![Screenshot 2024-09-22 124101](https://github.com/user-attachments/assets/500ad833-3af6-4b22-9968-910aab0d1e48)
+![Screenshot 2024-09-22 124114](https://github.com/user-attachments/assets/450b416c-d488-458f-886a-6ece121c1974)
+![Screenshot 2024-09-22 124128](https://github.com/user-attachments/assets/d4690abf-3043-4be0-99cf-b928fb91fa07)
 
 With CraftMyLetter, job applications just got a whole lot easier! 🚀
