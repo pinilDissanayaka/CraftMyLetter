@@ -10,7 +10,7 @@ CraftMyLetter is an AI-powered cover letter generator that helps you create pers
 - 🚀 Streamlit Interface: Easy-to-use web interface for quick generation and editing.
 
 ## 🖥️ Demo
-Check out the live demo of CoverCraft here. (Link if hosted, or remove if no demo available.)
+Check out the live demo of CoverCraft [here](https://pinildissanayaka-craftmyletter-app-gwmjv8.streamlit.app/).
 
 ## 🔧 Technologies
 - 🐍 Python: Core programming language.
