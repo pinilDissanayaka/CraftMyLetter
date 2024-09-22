@@ -6,3 +6,4 @@ streamlit
 pypdf
 logging
 pyyaml
+bs4 
