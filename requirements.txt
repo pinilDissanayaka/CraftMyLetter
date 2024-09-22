@@ -1,7 +1,8 @@
 langchain_core
-streamlit
+langchain_community
 langchain_groq
 langchain
-groq
+streamlit
+pypdf
 logging
 pyyaml
